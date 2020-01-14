@@ -1,0 +1,26 @@
+<header-image
+        [src]="'assets/imgs/header-members.jpg'"
+        [title]="'PremiumClub'"
+        [subtitle]="'Membros'"
+></header-image>
+
+<ion-content>
+    <div class="padding">
+        <ion-refresher (ionRefresh)="doRefresh($event)">
+            <ion-refresher-content></ion-refresher-content>
+        </ion-refresher>
+
+
+        <loading [hidden]="!isLoading"></loading>
+
+        <ion-list>
+            <ion-item *ngFor="let item of members" (click)="openMember(item)">
+                <ion-thumbnail item-start>
+                    <img [src]="item.getImage()">
+                </ion-thumbnail>
+                <h2>{{item.nome}}</h2>
+                <p>{{item.carro}}</p>
+            </ion-item>
+        </ion-list>
+    </div>
+</ion-content>

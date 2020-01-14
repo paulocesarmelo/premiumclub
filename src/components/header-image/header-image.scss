@@ -1,0 +1,30 @@
+header-image {
+  background: black;
+  .image-banner {
+    background-color: black;
+    position: fixed;
+    display: block;
+    z-index: 999;
+    margin-left: 0;
+    margin-right: 0;
+
+  }
+
+  h1, h2 {
+    color: map-get($colors, light);;
+    position: absolute;
+    left: 20px;
+    padding: 0 !important;
+    margin: 0;
+  }
+
+  h1 {
+    font-size: 2.5em;
+    bottom: 10px;
+  }
+  h2 {
+    font-size: 1.2em;
+    bottom: 50px;
+  }
+
+}

@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>PARCEIROS E BENEFÍCIOS</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+
+  <ion-refresher (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+
+
+  <loading [hidden]="!isLoading"></loading>
+
+  <ion-item [hidden]="isLoading">
+    <ion-label>Categoria</ion-label>
+    <ion-select [(ngModel)]="keySelect" (ionChange)="updateShow()" cancelText="Cancelar" okText="Filtrar">
+      <ion-option *ngFor="let key of categoriesKeys" value="{{key}}">{{getCategorieById(key)}}</ion-option>
+    </ion-select>
+  </ion-item>
+
+
+  <ion-list [hidden]="isLoading">
+    <ion-item *ngFor="let item of partnersShow" (click)="openPartner(item)">
+      <ion-thumbnail item-start>
+        <img [src]="item.getImage()">
+      </ion-thumbnail>
+      <h2>{{item.nome}}</h2>
+      <p>{{getCategorieById(item.categoria)}}</p>
+    </ion-item>
+
+    <ion-item [hidden]="isLoading || partnersShow.length">
+      <h2 text-center>Nenhum resultado encontrado.</h2>
+    </ion-item>
+  </ion-list>
+</ion-content>

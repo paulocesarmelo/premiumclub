@@ -1,0 +1,30 @@
+<ion-content class="wrapper">
+  <div class="premium-club-logo">
+    <img src="assets/imgs/logo-premium-club.png">
+  </div>
+  <div padding>
+    <h4>Premium Club</h4>
+    <p>
+      O Premium Club é um clube de network pessoal e profissional entre associados e empresas que englobam 5 segmentos
+      de máquinas de luxo: carros, motos, helicópteros, aviões e lanchas.<br> Saiba como se tornar um associado e
+      desfrutar dos benefícios
+      exclusivos e diferenciados que o Premium Club oferece.
+    </p>
+    <button ion-button class="botao" clear (click)="openPdf()" color="light" icon-end>Maquinas pré aprovadas <ion-icon name="open"></ion-icon></button>
+    <br>
+    <button ion-button class="botao" clear (click)="openSocio()" color="light" icon-end>Associe-se! <ion-icon name="open"></ion-icon></button>
+    <br>
+    <button ion-button class="botao" clear (click)="openSocial()" color="light" icon-end>Responsabilidade Social <ion-icon name="open"></ion-icon></button>
+    <br>
+    <button class="botao" ion-button clear (click)='openDepoimentos()' color="light" icon-end>Depoimentos <ion-icon name="open"></ion-icon></button>
+
+    <div class="wrapper-wecando">
+      <div class="wecando-logo">
+        <img src="assets/imgs/logo-wecando.png" (click)="openWecando()"/>
+      </div>
+      <p>Desenvolvido por WeCanDo tecnologia e inovação</p>
+    </div>
+
+
+  </div>
+</ion-content>

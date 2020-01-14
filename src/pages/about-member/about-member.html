@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Sobre Membro</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="closeModal()">
+        <ion-icon item-right name="ios-close-outline"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+  <image-card [src]="premiumClubMember.getImage()"></image-card>
+  <div padding>
+    <h3 text-center>{{premiumClubMember.nome}}</h3>
+
+    <div margin-top>
+      <b>Automóvel:</b>
+      {{premiumClubMember.carro}}
+    </div>
+
+
+    <b margin-top> Descrição:</b>
+    <div [innerHtml]="premiumClubMember.descricao"></div>
+
+    <button ion-button color="premiumclub-yellow" full icon-end (click)="openLink(premiumClubMember.getUrl())">
+      Ver perfil
+      <ion-icon name="open"></ion-icon>
+    </button>
+
+  </div>
+
+
+</ion-content>

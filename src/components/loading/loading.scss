@@ -1,0 +1,14 @@
+loading {
+  .wrapper {
+    margin: 10px 0;
+    color: map-get($colors, premiumclub-text-light);
+    text-align: center;
+    width: 100%;
+  }
+  ion-spinner * {
+    width: 28px;
+    height: 28px;
+    stroke: map-get($colors, premiumclub-text-light);;
+    fill: map-get($colors, premiumclub-text-light);;
+  }
+}

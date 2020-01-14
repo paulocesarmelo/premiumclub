@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Sobre Parceiro</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="closeModal()">
+        <ion-icon item-right name="ios-close-outline"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+  <image-card [src]="premiumClubPartner.getImage()"></image-card>
+  <div padding>
+    <h3 text-center>{{premiumClubPartner.nome}}</h3>
+
+    <div [hidden]="!getCategorieById(premiumClubPartner.categoria)" text-center>
+      {{getCategorieById(premiumClubPartner.categoria)}}
+    </div>
+
+    <div margin-top [hidden]="!premiumClubPartner.contato">
+      <ion-icon name="call"></ion-icon>
+      {{premiumClubPartner.contato}}
+    </div>
+    <div margin-top [hidden]="!premiumClubPartner.localizacao">
+      <ion-icon name="map"></ion-icon>
+      {{premiumClubPartner.localizacao}}
+    </div>
+    <div margin-top [hidden]="!premiumClubPartner.link">
+      <ion-icon name="globe"></ion-icon>
+      {{premiumClubPartner.link}}
+    </div>
+
+
+    <div margin-top><b> Benefício:</b></div>
+    <div [innerHtml]="premiumClubPartner.beneficio"></div>
+
+    <button [hidden]="!premiumClubPartner.link" ion-button color="premiumclub-yellow" full icon-end (click)="openLink(premiumClubPartner.link)">
+      Abrir Site
+      <ion-icon name="open"></ion-icon>
+    </button>
+
+    <button [hidden]="!premiumClubPartner.localizacao" ion-button color="premiumclub-yellow" full icon-end (click)="openMap(premiumClubPartner.localizacao)">
+      Mostrar no mapa
+      <ion-icon name="open"></ion-icon>
+    </button>
+
+  </div>
+
+
+</ion-content>

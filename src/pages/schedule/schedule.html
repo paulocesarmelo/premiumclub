@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>NOSSOS EVENTOS</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-refresher (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+
+
+  <loading [hidden]="!isLoading"></loading>
+  <event-card *ngFor="let item of events" [premium-club-event]="item" [on-press]="openEvent"></event-card>
+</ion-content>

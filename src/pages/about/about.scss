@@ -1,0 +1,35 @@
+page-about {
+  .wrapper{
+    background-image: url('../assets/imgs/background-about.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+
+    color: map-get($colors, light) !important;
+  }
+
+  p{
+    color: map-get($colors, light) !important;
+  }
+  .premium-club-logo{
+    margin-top: 20px;
+  }
+
+  .wecando-logo{
+    margin: 0 auto;
+    width: 12em;
+    padding: 0;
+  }
+  .wrapper-wecando p{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+  }
+  .wrapper-wecando{
+    position: relative;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+}

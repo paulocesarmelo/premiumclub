@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Sobre Evento</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="closeModal()">
+        <ion-icon item-right name="ios-close-outline"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+  <image-card [src]="premiumClubEvent.getImage()"></image-card>
+  <div padding>
+    <h3 text-center>{{premiumClubEvent.nome}}</h3>
+
+    <div margin-top>
+      <b>Parceiros:</b>
+      {{premiumClubEvent.parceiro}}
+    </div>
+
+    <div margin-top>
+      <ion-icon name="calendar"></ion-icon>
+      {{premiumClubEvent.data}}
+    </div>
+
+
+    <p margin-top> {{premiumClubEvent.descricao}}</p>
+
+    <button ion-button color="premiumclub-yellow" full icon-end (click)="openLink(premiumClubEvent.getUrl())">
+      Ver no site
+      <ion-icon name="open"></ion-icon>
+    </button>
+
+  </div>
+
+
+</ion-content>
